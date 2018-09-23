@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/contact-me.css" rel="stylesheet">
 
 </head>
 
@@ -46,19 +47,28 @@
 
         <!-- Button to toggle menu -->
         <button href="#menu-button" class="btn btn-secondary" id="menu-button"></button>
-
-        <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container" id="intro-container">
-              <p>Welcome to my website!  I began developing this website September 9th, 2018 in order to improve my
-                understanding of web-design and better prepare myself for Advanced Web-design and Programming, an
-                elective taught at the University of Montana by Michael Cassens.  This website uses bootstrap, and c.s.s.
-                to render the layout. Buttons rely on jQuery (a JavaScript library) to perform their assigned functions.</p>
-              <p>In the future I will update this website to make use of d3 graphical libraries.  I am intent on designing
-                a background similar to that of the <a href="https://d3js.org/"> d3 website.</a>  Except that graphical links to different websites will be
-                substituted with pictures I've taken during my travels.
+              <form class="form-style-4" action="" method="post">
+                <label for="field1">
+                  <span>Enter Your Name</span><input type="text" name="field1" required="true" />
+                </label>
+                <label for="field2">
+                  <span>Email Address</span><input type="email" name="field2" required="true" />
+                </label>
+                <label for="field3">
+                  <span>Short Subject</span><input type="text" name="field3" required="true" />
+                </label>
+                <label for="field4">
+                  <span>Your Message</span><textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
+                </label>
+                <label>
+                  <span>&nbsp;</span><input type="submit" value="Send Letter" />
+                </label>
+              </form>
             </div>
         </div>
+
 
         <!-- /#page-content-wrapper -->
 
@@ -69,10 +79,19 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <script type="text/javascript">
+    //auto expand textarea
+    function adjust_textarea(h)
+    {
+        h.style.height = "20px";
+        h.style.height = (h.scrollHeight)+"px";
+    }
+    </script>
+
     <!-- Menu Toggle Script -->
     <script>
-    //<iframe src="Scott McKay.pdf" width="100%" height="1024px"> Your browser does not appear to support inline frames. Please download the Resume using the link provided above. </iframe>
-    jQuery.get("introduction.txt", function(data) {
+    jQuery.get("introduction.txt", function(data)
+    {
       alert(data);
     })
 
