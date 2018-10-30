@@ -1,0 +1,91 @@
+/* Author:......... Scott McKay
+ * Date:........... Friday, October 19th, 2018
+ * Institution:.... University of Montana
+ * Class:.......... Advanced Web-design & Programming
+*/
+
+/* Removes margins and padding on all HTML-CSS elements. See: https://bit.ly/2QUMhJP */
+/* This is so that we don't run into any unecessary whitespace during website design */
+
+
+body
+{
+  background-color: #000000;
+}
+
+button.Button_Enabled
+{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button.Button_Enabled span
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button.Button_Enabled span:after
+{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button.Button_Enabled:hover span
+{
+  padding-right: 25px;
+}
+
+button.Button_Enabled:hover span:after
+{
+  opacity: 1;
+  right: 0;
+}
+
+button.Button_Disabled
+{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #a2938e;
+  animation: disabled_animation 4s infinite;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+@keyframes disabled_animation
+{
+  0%   {background-color: #a2938e;}
+  10%  {background-color: #d69073;}
+  30%  {background-color: #d57171;}
+  20%  {background-color: #db5d5d;}
+  40%  {background-color: #e64646;}
+  50%  {background-color: #ff5353;}
+  60%  {background-color: #e64646;}
+  70%  {background-color: #db5d5d;}
+  80%  {background-color: #d57171;}
+  90%  {background-color: #d69073;}
+  100% {background-color: #a2938e;}
+}

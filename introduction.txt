@@ -1,4 +1,0 @@
-Welcome to my website!  I began developing this website September 9th, 2018 in order to improve my
-understanding of web-design and better prepare myself for Advanced Web-design and Programming, an
-elective taught at the University of Montana by Michael Cassens.  This website uses bootstrap, and c.s.s.
-to render the layout. Buttons rely on jQuery (a JavaScript library) to perform their assigned functions.

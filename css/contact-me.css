@@ -45,10 +45,10 @@
     outline: none;
     border: none;
     border-bottom: 1px dashed #83A4C5;
-    width: 275px;
+    width: 500px;
     overflow: hidden;
     resize:none;
-    height:20px;
+    height:200px;
 }
 
 .form-style-4 textarea:focus,
