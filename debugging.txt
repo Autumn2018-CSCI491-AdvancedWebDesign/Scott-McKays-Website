@@ -1,0 +1,9 @@
+CSCI 491: Advanced Web Design and Programming
+Autumn Semester 2018: Homework IV
+Scott McKay
+
+
+All debugging has been done with Firefox developer tools and the wonderful console.log(); statement!  
+
+Link to GitHub repository:
+https://github.com/Autumn2018-CSCI491-AdvancedWebDesign/Scott-McKays-Website

@@ -1,0 +1,55 @@
+<!--
+Author:......... Scott McKay
+Date:........... Wednesday, October 31st, 2018
+Institution:.... University of Montana
+Class:.......... Advanced Web-design & Programming
+Lecturer:....... Michael Cassens
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Workers</title>
+    <link rel="stylesheet" href="load_data.css">
+  </head>
+  <body>
+    <div class="horizontally">
+    <p>This text should not freeze when data is being loaded...</p>
+    </div>
+    <button onclick="window.location.href = '../tutorials.html'">Previous Page</button>
+    <button id="loadData" onclick="startWorker()">Load Data</button>
+    <p>Data will be displayed here: <output id="result"></output></p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="load_data.js"></script>
+    <script>
+      var w;
+
+      function startWorker()
+      {
+        if(typeof(Worker) !== "undefined")
+        {
+          if(typeof(w) == "undefined")
+          {
+            w = new Worker("load_data.js");
+          }
+          w.onmessage = function(event)
+          {
+              document.getElementById("result").innerHTML = event.data;
+          };
+        }
+        else
+        {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+        }
+      }
+
+      function stopWorker()
+      {
+        w.terminate();
+        w = undefined;
+      }
+    </script>
+  </body>
+</html>
