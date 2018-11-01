@@ -1,0 +1,66 @@
+<!--
+Author:......... Scott McKay
+Date:........... Monday, October 29th, 2018
+Institution:.... University of Montana
+Class:.......... Advanced Web-design & Programming
+Lecturer:....... Michael Cassens
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Relevant keywords for search-engines (1), language website is in for search-engines (2): -->
+    <meta name="keywords" content="HTML, CSS, JavaScript, Game">
+    <html lang="en-US">
+    <!-- What should appear under the clickable link in a search-engine: -->
+    <meta name="description" content="A super fun cube game that definently isn't a Flappy Bird ripoff!">
+    <meta name="author" content="Scott McKay">
+
+    <!-- External & internal graphics -->
+    <link rel="icon" href="companion_cube.ico">
+    <link rel="stylesheet" href="hoppin_cube.css">
+
+    <title>Hoppin' Cube</title>
+  </head>
+  <body>
+    <div class="Page_Container">
+      &nbsp;
+      <div class="Canvas_Container">
+        <canvas id="canvas" width="800"height="350"></canvas>
+      </div>
+      <button class="button" id="startGame">Start Game</button>
+      <button class="button" id="retry">Retry?</button>
+      <button class="button" id="prevPage" onclick="window.location.href = '../tutorials.html'">Prev. Page</button>
+      <div class="Statistics_Bar">
+        &nbsp;
+        <p id="scoreMessage">Your score is: </p>
+        <p id="playerScore">0</p>
+        <p id="previousScoreMessage">(Last recorded score: N/A)</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="hoppin_cube.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ... -->

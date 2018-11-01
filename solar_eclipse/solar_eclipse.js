@@ -1,3 +1,9 @@
+/* Author:......... Scott McKay
+ * Date:........... Friday, October 19th, 2018
+ * Institution:.... University of Montana
+ * Class:.......... Advanced Web-design & Programming
+*/
+
 /* Reterns a random integer between 0 and (max - 1).  */
 function getRandomInt(max)
 {
